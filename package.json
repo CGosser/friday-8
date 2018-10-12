@@ -6,7 +6,7 @@
   "scripts": {
     "test": "karma start karma.conf.js",
     "build": "webpack --mode development",
-    "start": "npm run build; webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --open --mode development",
     "watch": "webpack --watch",
     "lint": "eslint src/*.js"
   },
@@ -37,8 +37,8 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.20.2",
     "uglifyjs-webpack-plugin": "^1.2.2",
-    "webpack": "^4.0.1",
-    "webpack-cli": "^2.0.9",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.0"
   },
   "dependencies": {
