@@ -2,7 +2,7 @@ import $ from 'jquery';
 export function doctorSearch(searchTerm , searchType){
   if (searchType == "condition") {
     $.ajax({
-      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=` + searchTerm + `&location=or-portland&user_location=45.5122%2C%20-122.6587&skip=0&limit=10&user_key=` + process.exports.apiKey,
+      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=` + searchTerm + `&location=or-portland&user_location=45.5122%2C%20-122.6587&skip=0&limit=10&user_key=` + process.env.exports.apiKey,
       type: 'GET',
       data: {
         format: 'json'
@@ -18,7 +18,7 @@ export function doctorSearch(searchTerm , searchType){
   }
   if (searchType == "name") {
     $.ajax({
-      url: "https://api.betterdoctor.com/2016-03-01/doctors?name=" + searchTerm + "&location=or-portland&user_location=45.5122%2C%20-122.6587&skip=0&limit=10&user_key=" + process.exports.apiKey,
+      url: "https://api.betterdoctor.com/2016-03-01/doctors?name=" + searchTerm + "&location=or-portland&user_location=45.5122%2C%20-122.6587&skip=0&limit=10&user_key=" + process.env.exports.apiKey,
       type: 'GET',
       data: {
         format: 'json'
