@@ -4,8 +4,12 @@ import {Doctor} from './backend'
 $(document).ready(function() {
   var searchType = $("#searchType").val()
   var userInput = $("#userInput").val()
-  var
-  var searchResult = Doctor.doctorSearch("steve", "name")
-  console.log(searchResult);
-  $(".outputs").append("<p>" + searchResult.data[1].profile.first_name + "</p>")
+  let doctor = new Doctor()
+  let searchResult = doctor.doctorSearch("feet", "condition")
+  searchResult.then(function(response){
+    console.log(searchResult);
+    console.log(response);
+  })
+
+
 })
