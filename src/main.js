@@ -6,6 +6,7 @@ $(document).ready(function() {
   var userInput = $("#userInput").val()
   let doctor = new Doctor()
   let searchResult = doctor.doctorSearch("feet", "condition")
+  console.log(searchResult);
   searchResult.then(function(response){
     console.log(searchResult);
     console.log(response);
