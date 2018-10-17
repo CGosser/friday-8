@@ -18,6 +18,8 @@ export class Doctor{
             reject(Error(request.statusText));
           }
         }
+        request.open("GET", url, true);
+        request.send();
       });
     }
     if (searchType == "name") {
@@ -37,6 +39,8 @@ export class Doctor{
             reject(Error(request.statusText));
           }
         }
+        request.open("GET", url, true);
+        request.send();
       });
     }
   }
