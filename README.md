@@ -9,7 +9,7 @@
     git clone https://github.com/CGosser/friday-8.git
     cd fakepath/friday-8
     touch .env
-    echo "API_KEY=[API KEY GOES HERE]" >>.env
+    echo "exports.apiKey=[API KEY GOES HERE]" >>.env
     npm install
     npm run build
     npm run start
