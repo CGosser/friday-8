@@ -14,6 +14,7 @@ $(document).ready(function() {
     let userInput = $("#userInput").val()
     let doctor = new Doctor()
     let promise = doctor.doctorSearch(userInput, searchType)
+
     promise.then(function(response){
       console.log(response);
       const body = JSON.parse(response);
@@ -37,6 +38,9 @@ $(document).ready(function() {
       } else {
         $('.outputs').append("<h1>no results for your search</h1>")
       }
+    })
+    promise.catch(function(error) {
+      $('.outputs').append(error)
     })
   })
 })
