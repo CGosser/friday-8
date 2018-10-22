@@ -8,7 +8,6 @@ function isAcceptingNewPatients(accepting){ if (accepting){
 }
 $(document).ready(function() {
   $('#searchInput').click(function() {
-    console.log("clicked");
     $('.outputs').empty()
     let searchType = $("#searchType").val()
     let userInput = $("#userInput").val()
@@ -16,7 +15,6 @@ $(document).ready(function() {
     let promise = doctor.doctorSearch(userInput, searchType)
 
     promise.then(function(response){
-      console.log(response);
       const body = JSON.parse(response);
       if (body.data.length > 0){
         for (let i = 0; i < body.data.length; i++){
